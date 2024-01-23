@@ -1,0 +1,342 @@
+.center-box {
+    margin: 0 auto;
+    width: 100%;
+}
+
+body {
+    font-family: 'Rajdhani';
+    color: #fff;
+    background-color: #202225;
+}
+
+header {
+    overflow: hidden;
+}
+
+.top,
+footer {
+    background-color: #08080b;
+}
+
+.top:before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#08080b+0,08080b+100&1+0,0+100 */
+    background: -moz-linear-gradient(left, rgba(8, 8, 11, 1) 0%, rgba(8, 8, 11, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(8, 8, 11, 1) 0%, rgba(8, 8, 11, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(8, 8, 11, 1) 0%, rgba(8, 8, 11, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08080b', endColorstr='#0008080b', GradientType=1);
+    /* IE6-9 */
+}
+
+.top {
+    position: relative;
+}
+
+.header-img img {
+    width: 100%;
+}
+
+.header-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    padding-left: 55px;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 35%;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border: solid 2px #fff;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: #90070b;
+}
+
+main {
+    padding: 65px 55px 65px 55px;
+}
+
+/*styles for hover on posters*/
+.container {
+    position: relative;
+    border: solid 2px transparent;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 92%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #08080b;
+    border: solid 2px #fff;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    width: 80%;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 500;
+}
+
+.overlay-button {
+    position: absolute;
+    top: 80%;
+    left: 32%;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border: solid 2px #fff;
+    padding: 10px;
+}
+
+.overlay-button:hover {
+    background-color: #90070b;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    margin: 0 -15px;
+    overflow: hidden;
+}
+
+.movie-list li {
+    padding: 0 15px;
+    float: left;
+}
+
+.movie-list img {
+    width: 100%;
+    margin: 0 0 30px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+footer {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    clear: both;
+}
+
+.categories li {
+    display: inline-block;
+    padding-top: 30px;
+    margin-left: 25px;
+    padding-bottom: 30px;
+}
+
+.categories li:hover {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 1830px) and (max-width: 1920px) {
+    .movie-list li {
+        width: 16.66%;
+        /*6 kép egy sorban*/
+    }
+}
+
+@media only screen and (min-width: 1630px) and (max-width: 1829px) {
+    .movie-list li {
+        width: 20%;
+        /*5 kép egy sorban*/
+    }
+}
+
+@media only screen and (min-width: 1330px) and (max-width: 1629px) {
+    .movie-list li {
+        width: 25%;
+        /*4 kép egy sorban*/
+    }
+    
+    .overlay {
+        height: 94%;
+    }
+
+    .overlay-button {
+        top: 80%;
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1329px) {
+    .movie-list li {
+        width: 33.33%;
+        /*3 kép egy sorban*/
+    }
+
+    .overlay {
+        height: 94%;
+    }
+
+    .overlay-button {
+        top: 80%;
+        left: 36%;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 660px) and (max-width: 1024px) {
+    .movie-list li {
+        width: 50%;
+        /*2 kép egy sorban*/
+    }
+
+    .overlay {
+        height: 95%;
+    }
+
+    .overlay-button {
+        top: 80%;
+        left: 36%;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 659px) {
+    .movie-list li {
+        width: 100%;
+        /*1 kép egy sorban*/
+    }
+    
+    .overlay {
+        height: 96%;
+    }
+
+    .overlay-button {
+        top: 80%;
+        left: 39%;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 520px) {
+    .overlay {
+        height: 95%;
+    }
+
+    .overlay-button {
+        top: 80%;
+        left: 32%;
+    }
+
+    .text {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        padding: 20px 55px;
+    }
+    
+    .header-text {
+        position: relative;
+        padding: 30px 55px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .header-img {
+        position: relative;
+    }
+
+    .header-img:before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#08080b+0,08080b+100&0+0,1+100 */
+        background: -moz-linear-gradient(top, rgba(8, 8, 11, 0) 0%, rgba(8, 8, 11, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(8, 8, 11, 0) 0%, rgba(8, 8, 11, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(8, 8, 11, 0) 0%, rgba(8, 8, 11, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0008080b', endColorstr='#08080b', GradientType=0);
+        /* IE6-9 */
+
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 950px) {
+    .header-img {
+        overflow: hidden;
+    }
+
+    .header-img img {
+        width: 130%;
+    }
+}
